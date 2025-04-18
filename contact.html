@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Élégance Parfums</title>
+    <!-- Même HEAD que les autres pages -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Même header que les autres pages -->
+    <header>
+        <div class="logo">ÉLÉGANCE PARFUMS</div>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À Propos</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contenu spécifique à la page Contact -->
+    <section class="contact-section">
+        <div class="container">
+            <h1>CONTACTEZ-NOUS</h1>
+            
+            <div class="contact-method">
+                <div class="icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Contact rapide et direct</p>
+                <a href="https://wa.me/22661543681" class="btn whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Envoyer un message
+                </a>
+            </div>
+            
+            <div class="contact-method">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Téléphone</h3>
+                <p>+226 61 54 36 81</p>
+                <button onclick="copyPhoneNumber()" class="btn copy-btn">
+                    <i class="far fa-copy"></i> Copier le numéro
+                </button>
+                <span id="copy-confirm" class="copy-message"></span>
+            </div>
+            
+            <div class="contact-method">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Adresse</h3>
+                <p>Avenue Kwame Nkrumah, Ouagadougou</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Même footer que les autres pages -->
+    <footer>
+        <p>© 2025 Élégance Parfums. Tous droits reservés. conception par BINARY GROUP </p>
+    </footer>
+
+    <!-- Script pour la copie du numéro -->
+    <script>
+        function copyPhoneNumber() {
+            navigator.clipboard.writeText("+22661543681");
+            const confirmMsg = document.getElementById("copy-confirm");
+            confirmMsg.textContent = "Numéro copié !";
+            setTimeout(() => {
+                confirmMsg.textContent = "";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
